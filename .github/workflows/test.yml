@@ -1,4 +1,4 @@
-name: test
+name: test1
 
 on: [pull_request]
 
@@ -17,19 +17,10 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Run test
-        run: npm test
-
-      - name: Run lint
-        run: npm run lint
-
-      - name: Run build
-        run: npm run build
-
       - uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
-          owner: wuttichai-beamcheckout
-          repo: ae-test
+          owner: ae-test-company
+          repo: ae-automate
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           workflow_file_name: dispatch.yml
           ref: master
