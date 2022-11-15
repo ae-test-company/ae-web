@@ -20,7 +20,7 @@ jobs:
       - uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
           owner: wuttichai-beamcheckout
-          repo: ae-automate
+          repo: ae-test
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           workflow_file_name: dispatch.yml
           ref: master
